@@ -30,6 +30,15 @@ function startCalc() {
     doc.unsuccessfulPercentInput.value = state.unsuccessfulPercent;
 
 }
+function checkInput(input){
+    let minta = /^[0-9]+$/;
+    let inputStr = String(input)
+    if(inputStr.match(minta)){
+        return true
+    }else{
+        return false
+    }
+}
 
 
 function getUnsuccessCount(competitor, reached) {
